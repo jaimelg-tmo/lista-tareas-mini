@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style3.css">
+    <link rel="shortcut icon" href="assets/img/lista-tareas.png" type="image/x-icon">
+    <title>Lista de Tareas Diarias</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Mi Lista de Tareas <img src="assets/img/lista-tareas.png"></h1>
+        <h4 id="avisos"></h4>
+        <div class="input-area">
+            <input type="text" id="nueva-tarea-input" placeholder="Escribe una nueva tarea..." onkeyup="this.value = this.value.toUpperCase();" required>
+            <select id="prioridad-select" aria-required="true">
+                <option value="" disabled selected>Prioridad</option>
+                <option value="Baja">Baja</option>
+                <option value="Moderada">Moderada</option>
+                <option value="Urgente">Urgente</option>
+            </select>
+            <button id="agregar-btn">Agregar</button>
+        </div>
+
+        <div id="lista-encabezado" class="lista-encabezado hidden">
+            <span class="encabezado-tarea">Tarea</span>
+            <span class="encabezado-prioridad">Prioridad</span>
+            <span class="encabezado-fecha">Fecha</span>
+            <span class="encabezado-accion">Acción</span>
+        </div>
+        
+        <ul id="lista-tareas">
+            </ul>
+    </div>
+
+
+    <script src="assets/js/script3.js"></script>
+</body>
+</html>

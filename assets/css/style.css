@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap');
+
+body {
+    font-family: 'Nata Sans', Tahoma, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 1em 0;
+}
+
+.container {
+    background: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #4a4a4a;
+    margin-bottom: 1em;
+}
+
+.input-area {
+    display: flex;
+    gap: 0.5em;
+    margin-bottom: 1.5em;
+}
+
+#nueva-tarea-input {
+    flex-grow: 1;
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.75em;
+}
+
+#prioridad-select {
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 0.75em;
+}
+
+#agregar-btn {
+    padding: 0.8em 1.2em;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.75em;
+    transition: background-color 0.3s ease;
+}
+
+#agregar-btn:hover {
+    background-color: #0056b3;
+}
+
+#lista-tareas {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.lista-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 0 1em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    color: #555;
+    border-bottom: 2px solid #007bff;
+}
+
+.encabezado-tarea {
+    flex-grow: 1.5;
+}
+
+.encabezado-prioridad,
+.encabezado-fecha,
+.encabezado-accion {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.encabezado-prioridad { width: 75px; }
+.encabezado-fecha { width: 75px; }
+.encabezado-accion { width: 65px; }
+
+/* Clase para ocultar elementos */
+.hidden {
+    display: none;
+}
+
+.tarea-item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    background: #f9f9f9;
+    padding: 1em;
+    border-bottom: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    font-size: 0.75em;
+}
+
+.tarea-item.completada .texto {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.tarea-item.completada .eliminar-btn {
+    background-color: #b30000;
+}
+
+.tarea-item.completada .eliminar-btn:hover {
+    background-color: #700000;
+}
+.tarea-item input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.tarea-item .texto {
+    flex-grow: 1;
+    transition: color 0.3s ease;
+}
+
+.tarea-item .texto {
+    flex-grow: 1;
+    transition: color 0.3s ease;
+    width: 45%;
+}
+
+.prioridad {
+    padding: 0.2em 0.6em;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.prioridad-Urgente {
+    background-color: #dc3545;
+    text-align: center;
+    width: 55px;
+}
+
+.prioridad-Moderada {
+    background-color: #ffc107;
+    color: #333;
+    text-align: center;
+    width: 55px;
+}
+
+.prioridad-Baja {
+    background-color: #28a745;
+    text-align: center;
+    width: 55px;
+}
+
+.fecha {
+    width: 85px;
+    text-align: center;
+    font-size: 1em;
+}
+
+.eliminar-btn {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 0.5em 0.8em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+@media screen and (max-width: 540px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .input-area {
+        flex-wrap: wrap;
+    }
+
+    #lista-tareas {
+        font-size: small;
+    }
+
+    .lista-encabezado {
+        font-size: smaller;
+        width: 95%;
+    }
+
+    .encabezado-tarea {
+        padding-left: 5%;
+        width: 65%;
+    }
+
+    .encabezado-prioridad {
+        text-align: right;
+        width: 30%;
+    }
+
+    .encabezado-fecha {
+        text-align: right;
+        width: 30%;
+    }
+
+    .encabezado-accion {
+        text-align: right;
+        width: 30%;
+    }
+
+    .prioridad-Urgente {
+        width: 15%;
+    }
+
+    .prioridad-Moderada {
+        width: 15%;
+    }
+
+    .prioridad-Baja {
+        width: 15%;
+    }
+
+    .eliminar-btn {
+        font-size: xx-small;
+        width: fit-content;
+    }
+}

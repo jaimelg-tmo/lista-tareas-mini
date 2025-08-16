@@ -32,9 +32,9 @@ Para ejecutar este proyecto en tu máquina local, sigue estos sencillos pasos:
     ├── index.html
     ├── assets/
     │   ├── css/
-    │   │   └── style3.css
+    │   │   └── style.css
     │   └── js/
-    │       └── script3.js
+    │       └── script.js
     └── readme.md
     ```
 

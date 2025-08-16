@@ -86,14 +86,14 @@ function agregarTarea() {
     //  Se valida que se escriba una tarea para poder agregarla con el botón.
     if (textoNuevaTarea === '') {
         //alert('Por favor, escribe una tarea a realizar para poder ingresarla.');
-        document.getElementById("avisos").innerText = 'Por favor, escribe una tarea a realizar para poder ingresarla.';
+        document.getElementById("avisos").innerText = 'Por favor, ingresa una tarea a realizar para poder agregarla.';
         return;
     }
 
     //  Se valida que se seleccione una prioridad para la tarea a ingresar.
     if (prioridad === '') {
         //alert('Por favor, selecciona una prioridad para la tarea a ingresar.');
-        document.getElementById("avisos").innerText = 'Por favor, selecciona una prioridad para la tarea a ingresar.';
+        document.getElementById("avisos").innerText = 'Por favor, selecciona la prioridad de la tarea a agregar.';
         return;
     }
 
